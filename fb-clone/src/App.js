@@ -4,29 +4,38 @@ import Header from "./Header";
 import Sidebar from './Sidebar';
 import Feed from './Feed';
 import Widgets from './Widgets';
+import Login from './Login';
 
 
 function App() {
+  
+  const user = null;
+
   return (
     // BEM naming convention
     <div className="app">
+      {!user ? (
+        <Login />
+      ) : (
+        <>
+          {/* Header */}
+          <Header />
 
-      {/* Header */}
-      <Header />
+          {/* App Body */}
+          <div className="app__body">
 
-      {/* App Body */}
-      <div className="app__body">
+            {/* Sidebar */}
+            <Sidebar />
 
-        {/* Sidebar */}
-        <Sidebar />
+            {/* Feed */}
+            <Feed />
 
-        {/* Feed */}
-        <Feed />
+            {/* Widgets */}
+            <Widgets />
 
-        {/* Widgets */}
-        <Widgets />
-
-      </div>
+          </div>
+        </>
+      )}
 
     </div>
   );
