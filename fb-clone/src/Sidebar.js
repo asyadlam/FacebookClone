@@ -9,11 +9,15 @@ import ChatIcon from '@mui/icons-material/Chat';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 import ExpandMoreOutlined from '@mui/icons-material/ExpandMoreOutlined';
+import { useStateValue } from './StateProvider';
 
 function Sidebar() {
+
+    const [{ user }, dispatch] = useStateValue();
+
     return (
         <div className="sidebar">
-            <SidebarRow src="https://yaay.today/__export/1609006877991/sites/yaay/img/2020/12/26/9e51466c0f910448dfb23c4e85eb95fe.jpg_462530703.jpg" title="Asya" />
+            <SidebarRow src={user.photoURL} title={user.displayName} />
             <SidebarRow Icon={LocalHospitalIcon} title="COVID-19 Information Center" />
             <SidebarRow Icon={EmojiFlagsIcon} title="Pages" />
             <SidebarRow Icon={PeopleIcon} title="Friends" />
