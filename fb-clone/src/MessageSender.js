@@ -6,7 +6,7 @@ import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import { useStateValue } from './StateProvider';
 import db from "./firebase";
-import firebase from "./firebase";
+import firebase from 'firebase/compat/app';
 
 function MessageSender() {
 
