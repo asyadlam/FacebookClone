@@ -29,7 +29,7 @@
 }
 
 .messageSender__top > form > button {
-    display: none;
+    display:flex;
 }
 
 .messageSender__input {
